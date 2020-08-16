@@ -19,8 +19,9 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Project Idea</h1>
-					</header>
+						<h1><strong>Smart Garage Door</strong></h1>
+                        <p>Life has no remote. Get up and change it yourself.</p>
+                    </header>
 
 				<!-- Main -->
 					<div id="main">
@@ -28,11 +29,41 @@
 						<!-- Content -->
 							<section id="content" class="main">
 								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+								<h2 align = "center"><strong>Overview</strong></h2>
+								<p align = "justify">Coming to home in your vehicle and searching for your remote controller to open garage door or main gate.
+                                 Is it hard to find? Or has it slipped in your pocket or lost? Is your family usually gets sick and tired of it? License plate detection system is solution for all your problem.
+                                 The vehicle just have to stop in front of the garage and detect your license plate, verify with saved records and if verified doors will open and then you will not need your 315 or 433 MHz garage remote.
+                                 This type of problem is frequently faced by many people in all regions. Using Raspberry Pi, single board microcontroller (taking example of Arduino) and other small component, these technologies are cheap and easily assembled solution to this problem.</p>
+                                <h2 align = "center"><strong>Description</strong></h2>
+                                <p align = "justify">License plate detection system is a digital processing image which is commonly used in maintain law enforcements, traffic rules and various security purposes.
+                                 This device will connect to USB camera although most surveillance cameras are IP cameras and if you want more security you can connect it to home Wi-Fi and you will receive notifications whenever door will open and close by installing small customised app.</p>
+								<h2>How to Setup the Device?</h2>
+								<p align = "justify">Setup will be easy as you need to plug your HDMI cable to use the Raspbian GUI. programme can be downloaded for Raspbian form Arduino programmer. Format your EEPROM (also E2PROM) and write transceiver code or it can be download and uploaded to your Arduino.
+                                 Since receiving signals are only necessary to save the remote controller data to control the garage with transmissions. Now add the required connections and camera filters. And then code the Raspberry Pi with any language (Python, C, C++, Java, Scratch, and Ruby) as all come installed by default on the Raspberry Pi.
+                                 But As per knowledge Python is the best for Raspberry Pi programming. For IOT and home automation projects, mostly raspberry pi is used and for automation best language is any scripting language.
+                                 I think even you can control it by connecting to Google or Alexa which mean you can operate it with your mobile in case of any difficulty like not able to detect license plate because of poor visibility. </p>
+                                <h2>How it will Work?</h2>
+                                <p align = "justify">When vehicle came to door it captures image and KNN (K-nearest neighbors algorithm) is used to extract License Number from it. As this process work in three stages which are pre-processing, plate localisation and license plate recognition system.
+                                 Pre-processing is to convert image to greyscale which consider each pixel of image which ranges between 0 to 255 and blur the image using Gaussian Filter and find all the contour images (mainly used for shape recognition and detection).
+                                 In license plate recognition system KNN is used to find all possible character in image and crop it to extract character and numbers. Each character and numbers in plate should be segmented using KNN to recognise using training data.
+                                 Extracted license number is run through database containing registered number and when found match then it runs command to open the door.</p>
+                                <h2 align = "center"><strong>Tools and Technologies</strong></h2>
+                                 <ul>
+                                    <li align = "justify"><b>Raspberry Pi</b> is used for its small size and low cost price and small size similar to credit card which can be inserted in micro controller and computer while programming it. Because of its cost and performance, it is one of the best project board available in market.  </li>
+                                    <li align = "justify"><b>Arduino Nano, Uno or Mega</b> any one of these can be used for this. It is a microcontroller built on a single printed circuit board. This provides all of the necessary circuitry for a useful control task.</li>
+                                    <li align = "justify"><b>Camera</b> as it is most important part.</li>
+                                    <li align = "justify"><b>RF 315 or 433 MHz receiver, transmitter</b> for opening and closing of door</li>
+                                    <li align = "justify"><b>Breadboard</b> to build your RF circuit but it is optional</b></li>
+                                    <li align = "justify"><b>Jumper wires and a single USB cable</b></li>
+                                </ul>
+                                <h2 align = "center"><strong>Skills Required</strong></h2>
+                                <p align = "justify">Most important skill is known a language I which you can write code. Without that everything is useless. If does not know, it can be learned by completing online modules or seeing templates and used code for similar action.
+                                 Most of the part come with drivers installed so you just have to download software on them.
+                                 All the parts and software are easily available with cheap price tag on market as they are basic components of every IOT projects.</p>
+                                <h2 align = "center"><strong>Outcome</strong></h2>
+                                <p align = "justify">As if this project succeed it can solve many problems as stated in Overview and make daily lifestyle much easy and boost security. This type of technology can be used in similar products such as face recognition doors, car lock and much more.
+                                 This technology can unlock many services and used in product we cannot even imagine and with more productivity in them.
+                                 As most Common drawback of every IOT can be found it this device which is it can be hackable and if someone knows that you are using this, then he can come up with duplicate license plate and access it but then too you will receive notification.</p>
 							</section>
 
 					</div>
@@ -41,22 +72,23 @@
 					<footer id="footer">
 						<section>
 							<h2>Reference</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-						</section>
+							<ul>
+							    <li><b><a href = "https://www.youtube.com/watch?v=oBAOdj8HABc">Open Automatic License Plate Recognition Youtube</li>
+                                <li><a href = "https://www.youtube.com/watch?v=nmDiZGx5mqU&feature=emb_rel_end">OCR License Plate Recognition</li>
+                                <li><a href = "https://circuitdigest.com/tutorial/vehicle-number-plate-detection-using-matlab-and-image-processing">Car Number Plate Detection Using MATLAB and Image Processing</a></li>
+							</ul></section>
 						<section>
 							<h2>Contact Details</h2>
 							<dl class="alt">
-								<dt>Address</dt>
-								<dd>Unit 3/2 Clarinda Road, Essendon Victoria-3040 &bull; Australia</dd>
-								<dt>Phone</dt>
-								<dd>(+61) 444 598 748</dd>
+								<dt>Student_Id</dt>
+								<dd>S3760660</dd>
 								<dt>Email</dt>
-								<dd><a href="#">vinkalpatidar111@gmail.com</a></dd>
+								<dd><a>s3760660@student.rmit.edu.au</a></dd>
 							</dl>
 							<ul class="icons">
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.facebook.com/vinkal.patidar.16" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/patidar_vinkal/?hl=en" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/PVinkal" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
 							</ul>
 						</section>
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
